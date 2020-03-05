@@ -1,0 +1,30 @@
+.sideBarMenu{
+    position: absolute;
+    top:7%;
+    width: 70px;
+    height: 93%;
+    border: 0;
+    margin:0;
+    z-index: 20;
+}
+.sideBarBox{
+    position: absolute;
+    height: 100%;
+    width: 60px;
+    border: 0;
+    margin: 0;
+    background-color: #8a6de9;
+    overflow :scroll;
+}
+#sideButton{
+    position: absolute;
+    left: 60px;
+    top: 40%;
+    width: 8px;
+    background-color: #b8c35b;
+    height: 30px;
+    cursor: pointer;
+}
+
+
+

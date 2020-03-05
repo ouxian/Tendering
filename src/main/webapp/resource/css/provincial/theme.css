@@ -1,0 +1,75 @@
+#theme{
+    position: absolute;
+    left: 50px;
+    top: 95%;
+    width:380px ;
+    height:40px ;
+    z-index: 666;
+    /*background-color: #;*/
+}
+#theme a{
+    position: absolute;
+    vertical-align: middle;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin: 0px 2px;
+    border-radius: 2px;
+    box-sizing: content-box;
+    background: #fff;
+    cursor: pointer;
+    text-decoration: none;
+}
+#default{
+    left: 0px;
+
+}
+#default span{
+    background: linear-gradient(135deg,#2f4554 0%,#2f4554 0%, #f3f1ec 50%, #dcdcdc 50%);
+}
+#dark{
+    left:38px;
+}
+#dark span{
+    /*background:linear-gradient(120deg, #f0bcb9 0%, #dd6b66 50%, #759aa0 51%, #b1c6ca 100%) ;*/
+    background:linear-gradient(135deg, #1e4961 0%, #1d2833 50%, #00192e 51%, #003553 50%) ;
+}
+
+#blue{
+    left:76px;
+}
+#blue span{
+    /*background:linear-gradient(120deg, #f0bcb9 0%, #dd6b66 50%, #759aa0 51%, #b1c6ca 100%) ;*/
+    background:linear-gradient(135deg, #8ca271 0%, #8ca271 50%, #759aa0 0%, #b1c6ca 50%) ;
+}
+
+#red{
+    left:114px;
+}
+#red span{
+    /*background:linear-gradient(135deg, #8dcaea 0%, #8dcaea 50%, #8dcaea 51%, #37A2DA 50%) ;*/
+    background:linear-gradient(135deg, #8ca271 0%, #8ca271 50%, #8ca271 51%, #95a6f8 50%) ;
+}
+#yellow{
+    left:152px;
+}
+#yellow span{
+    background:linear-gradient(135deg, #c2caee 0%, #f1eeee 50%, #d1d1d1 51%, #d1d1d1 20%) ;
+}
+#boundary{
+    left: 190px;
+}
+#boundary span{
+    background-image: url("../../img/bondary.png") ;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+#theme a span{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin-left: 2px;
+    margin-top: 2px;
+}
+
+

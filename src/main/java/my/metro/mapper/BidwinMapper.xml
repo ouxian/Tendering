@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- 为这个mapper指定一个唯一的namespace，namespace的值习惯上设置成包名+sql映射文件名，这样就能够保证namespace的值是唯一的 
+	例如namespace="me.gacl.mapping.userMapper"就是me.gacl.mapping(包名)+userMapper(userMapper.xml文件去除后缀) -->
+<mapper namespace="my.metro.mapper.BidwinMapper">
+	<!-- 在select标签中编写查询的SQL语句， 设置select标签的id属性为getUser，id属性值必须是唯一的，不能够重复 使用parameterType属性指明查询时使用的参数类型，resultType属性指明查询返回的结果集类型 
+		resultType="me.gacl.domain.User"就表示将查询结果封装成一个User类的对象返回 User类就是users表所对应的实体类 -->
+
+	<select id="getAllByYear" parameterType="int" resultType="java.util.Map">
+		SELECT * from gd_zhongbiao where years = #{years} ORDER by city
+	</select>
+
+	<select id="getAllByCity" parameterType="string" resultType="java.util.Map">
+		SELECT * from gd_zhongbiao WHERE city = #{city} ORDER by years
+	</select>
+
+	<select id="getAllByYearAndCity" resultType="java.util.Map">
+		SELECT * from gd_zhongbiao where city = #{city,jdbcType=VARCHAR} AND years = #{years,jdbcType=INTEGER} ORDER by years
+	</select>
+
+	<select id="getAllByYearAndCompany" resultType="java.util.Map">
+		SELECT * from gd_zhongbiao where years = #{years,jdbcType=INTEGER} AND WinbidCompany = #{WinbidCompany,jdbcType=VARCHAR} ORDER by city
+	</select>
+
+	<select id="getAllByCityAndCompany" resultType="java.util.Map">
+		SELECT * from gd_zhongbiao where city = #{city,jdbcType=VARCHAR} AND WinbidCompany = #{WinbidCompany,jdbcType=VARCHAR} ORDER by years
+	</select>
+
+	<select id="getAllByYearCityCompany" resultType="java.util.Map">
+		SELECT * from gd_zhongbiao where city = #{city,jdbcType=VARCHAR} AND years = #{years,jdbcType=INTEGER} AND WinbidCompany = #{WinbidCompany,jdbcType=VARCHAR} ORDER by years
+	</select>
+
+	<select id="getAllByCompany" parameterType="string" resultType="java.util.Map">
+		SELECT * from gd_zhongbiao WHERE WinbidCompany = #{WinbidCompany} ORDER by years
+	</select>
+
+    <select id="getSumByCompanyYear" resultType="java.util.Map">
+        SELECT A.years,A.city,A.WinbidCompany,SUM(A.amountOfMoney) as sums FROM (SELECT years,city,WinbidCompany,amountOfMoney FROM gd_zhongbiao WHERE WinbidCompany = #{WinbidCompany,jdbcType=VARCHAR} AND years=#{years,jdbcType=INTEGER})A GROUP BY city ORDER BY sums DESC
+    </select>
+
+    <select id="getSumByYearCity" resultType="java.util.Map">
+        SELECT years,city,WinbidCompanyFinal as WinbidCompany,amountOfMoney FROM gd_zhongbiao WHERE years = #{years,jdbcType=INTEGER} AND city = #{city,jdbcType=VARCHAR}
+    </select>
+
+
+
+</mapper>

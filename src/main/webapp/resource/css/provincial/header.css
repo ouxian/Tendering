@@ -1,0 +1,113 @@
+/*要加上此句话，否则html会比body要高*/
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    margin: 0;
+    height: 100%;
+}
+body{
+    width: 100%;
+}
+
+div{
+    display: block;
+}
+
+.container-header{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    height: 7%;
+    text-align: center;
+    box-sizing: border-box; /*规定两个并排的带边框的框*/
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../../img/head.jpg");
+}
+body,div,p,ul,li{
+    padding: 0;
+    margin: 0;
+}
+ul{
+    list-style: none;
+}
+.log{
+    position: absolute;
+    right: 1%;
+    top: 20%;
+    height: 57%;
+    width: 220px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../../img/logo.png");
+}
+.sele{
+    position: absolute;
+    right: 30%;
+    top: 20%;
+    height: 57%;
+    width: 220px;
+}
+.header{
+    position: absolute;
+    left: 5%;
+    top: 15%;
+    height: 85%;
+    width: 350px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../../img/title.png");
+}
+#Navigation{
+    position: absolute;
+    left: 35%;
+    top: 30%;
+    height: 50%;
+    width: auto;
+}
+/*地级市采购总金额分布图*/
+#Navigation_Btn00{
+    color: #dbdbdb !important;
+    background-color: #10055a !important;
+    margin-right: 6px !important;
+    width: 180px !important;
+    border: 1px solid #4373a1;
+}
+/*不同类型采购金额分布图*/
+#Navigation_Btn01{
+    color: #dbdbdb !important;
+    background-color: #2f345a !important;
+    margin-right: 6px !important;
+    width: 180px !important;
+    border: 0px;
+}
+/*中标总金额分布图(直方图)*/
+#Navigation_Btn02{
+    color: #dbdbdb !important;
+    background-color: #2f345a !important;
+    margin-right: 6px !important;
+    width: 180px !important;
+    border: 0px;
+}
+/*中标总金额分布图(饼图)*/
+#Navigation_Btn03{
+    color: #dbdbdb !important;
+    background-color: #2f345a !important;
+    margin-right: 6px !important;
+    width: 180px !important;
+    border: 0px;
+}
+/*设计机构下拉分布图*/
+#Navigation_Btn04{
+    color: #dbdbdb !important;
+    background-color: #2f345a !important;
+    width: 180px !important;
+    border: 0px;
+}
+
+
+
+
